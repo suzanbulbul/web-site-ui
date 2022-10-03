@@ -1,5 +1,91 @@
 header{
-    h1{
-        color: $red;
+    .header-top{
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: center;
+        background-color: $primary-color;
+        label,span{
+            color: $white;
+            font-size: 16px;
+            font-weight: 600;
+        }
+        span{
+            font-weight: 400;
+            @media (max-width: 981px) {
+                margin: 10px 0;
+            }
+            &:first-child{
+                text-align: right;
+                &::after{
+                    content: '';
+                    position: absolute;
+                    width: 1px;
+                    background: $white;
+                    height: 100%;
+                    right: -3px;
+                }
+            }
+            &:last-child{
+                text-align: left;
+            }
+        }
     }
+    .header{
+        padding: 25px 0px 25px 0px;
+        margin-bottom: 25px;
+        @media (max-width: 981px) {
+            padding: 20px 0px 20px 0px;
+            box-shadow: 3px 3px 5px #3f3f3f52;
+        }
+        
+        .logo{
+            img{
+                width: 200px;
+            }
+        }
+        .nav{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            &-link{
+                color: $gray;
+                font-size: 16px;
+                font-weight: 400;
+                padding: 0 20px;
+                position: relative;
+                &::before{
+                    content: "";
+                    position: absolute;
+                    bottom: 5px;
+                    width: 0;
+                    height: 2px;
+                    left: 0;
+                    right: 0;
+                    top: 30px;
+                    margin: auto;
+                    background: $gray;
+                    transition: .3s ease-in-out;
+                   }
+                &:hover{
+                   &::before{
+                    content: '';
+                    width: 20%;
+                   }
+                }
+            }
+        }
+    }
+    &.scrolled {
+        width: 100%;
+        position: fixed;
+        background: $white;
+        transition: all 0.4s ease;
+        backdrop-filter: blur(13px);
+        -webkit-: blur(13px);
+        box-shadow: 3px 3px 5px #3f3f3f52;
+        .header{
+            padding: 20px 0px 20px 0px;
+            margin-bottom: 0;
+        }
+      }
 }
