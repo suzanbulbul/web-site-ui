@@ -24,7 +24,10 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    '~/plugins/axios',
+    '~/plugins/axios',   
+    //https://vuejsprojects.com/vue-carousel 
+    { src: '~/plugins/carousel.js', mode: 'client' }
+
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
