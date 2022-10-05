@@ -1,5 +1,6 @@
 <template>
   <div class="container">
-	<Banner />
+	  <Banner/>
+    <AboutUs/>
   </div>
 </template>

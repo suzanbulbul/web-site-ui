@@ -1,0 +1,9 @@
+.about-us{
+    img{
+        max-width: 444px;
+        @media (max-width: 981px) {
+            max-width: 100%;
+            margin-bottom: 30px;
+        }
+    }
+}
