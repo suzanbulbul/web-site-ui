@@ -3,38 +3,48 @@
   display: flex;
   align-items: flex-end;
   position: absolute;
+  right: 0;
 
   &-button {
     font-size: 0;
+    margin: 0!important;
+    padding: 0!important;
+    &::before{
+      padding: 20px;
+      background: $gray;
+      color: $white;
+      @media (max-width: 768px) {
+          padding: 8px;
+      }
+     }
 
     &:focus {
       outline: none!important
     }
 
     &.VueCarousel-navigation-prev {
-      position: relative!important;
-      left: -60px!important;
-      //transform: translateY(-50%) translateX(-100%) rotateZ(-180deg)!important;
       &:before {
         font-family: 'icomoon';
         content: "\e900";
         position: absolute;
-        top: -10px;
-        right: 0;
         font-size: 18px;
+        right: 63px;
+        @media (max-width: 768px) {
+          right: 39px;
+        }
       }
     }
     &.VueCarousel-navigation-next {
-      position: relative!important;
-      // right: 20px!important;
-      transform: translateY(-50%) translateX(-100%) rotateZ(-180deg)!important;
+      transform: rotateZ(-180deg)!important;
       &:before {
         font-family: 'icomoon';
         content: "\e900";
-        position: absolute;
-        top: 0;
-        right: 0;
         font-size: 18px;
+        top: -67px;
+        position: absolute;
+        @media (max-width: 768px) {
+          top: -43px;
+        }
       }
     }
 }

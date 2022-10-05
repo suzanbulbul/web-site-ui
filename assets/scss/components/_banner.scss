@@ -27,43 +27,13 @@
     .VueCarousel{
         position: relative;
         &-navigation{
-            bottom: 0;
-            right: 9px;
+            bottom: 68px;
             @media (max-width: 768px) {
-                bottom: 89px;
-                right: -14px;
-            }
-            button{
-                padding: 0!important;
-                margin: 0!important;
-               &::before{
-                padding: 20px;
-                background: $gray;
-                color: $white;
-                @media (max-width: 768px) {
-                    padding: 8px;
-                }
-               }
-            }
-            &-prev{
-                &::before{
-                    top: -67px;
-                    right: -6px;
-                }
-            }
-            &-next{
-                &::before{
-                    top: 0;
-                    right: -54px;
-                    @media (max-width: 768px) {
-                        top: 24px;
-                    }
-                }
+                bottom: 113px;
             }
         }
         &-slide{
             position: relative;
         }
     }
-
 }
