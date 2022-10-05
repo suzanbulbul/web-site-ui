@@ -3,5 +3,6 @@
 	  <Banner/>
     <AboutUs/>
     <Product/>
+    <Showroom/>
   </div>
 </template>

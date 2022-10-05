@@ -1,0 +1,26 @@
+.showroom{
+    .VueCarousel{
+        &-navigation{
+            display: none;
+            top: -128px;
+            @media (max-width: 768px) {
+                top: -75px;
+            }
+        }
+    }
+    .card{
+        width: 292px;
+        border: 1px solid $primary-color;
+        &::before{
+            content: '';
+            position: absolute;
+            height: 15px;
+            width: 94px;
+            background: $primary-color;
+            left: 35%;
+        }
+        .content{
+            padding: 46px 25px;
+        }
+    }
+}
