@@ -18,7 +18,7 @@
             <div class="container">
                <div class="row align-items-center">
                     <div class="logo col-4">
-                        <img src="~/assets/img/logo.jpeg" />
+                        <img src="~/assets/img/logo.png" />
                     </div>
                     <div class="col-md-8">
                         <div class="d-none d-md-block d-sm-none">
