@@ -1,5 +1,5 @@
 <template>
-   <div class="banner">
+   <div class="banner mb-100">
     <carousel 
         :per-page="1"  
         :mouse-drag="true" 
