@@ -1,0 +1,21 @@
+.modal{
+    img{
+        margin-bottom: 20px;
+    }
+    .title{
+        font-size: 30px;
+        font-weight: 700;
+        color: $dark;
+        margin-bottom: 5px;
+    }
+    .desc{
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 0px;
+        color: $gray;
+    }
+    .content{
+        width: 90%;
+        margin: 0 auto;
+    }
+}
