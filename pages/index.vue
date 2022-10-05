@@ -3,6 +3,7 @@
 	  <Banner/>
     <AboutUs/>
     <Product/>
+    <Contact/>
     <Showroom/>
   </div>
 </template>
