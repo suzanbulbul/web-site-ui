@@ -1,0 +1,20 @@
+.contact{
+    .map{
+        max-width: 900px;
+        margin: 0 auto;
+    }
+    .sub-title{
+        color: $dark;
+        font-size: 30px;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    .desc{
+        color: $gray;
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 15px;
+    }
+}
