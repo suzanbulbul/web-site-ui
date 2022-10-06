@@ -33,7 +33,7 @@
                                             </li>
                                         </ul>
                                     </a>
-                                    <a v-else class="nav-link" aria-current="page" href="#">{{item.title}}</a>
+                                    <nuxt-link v-else :to="localePath(item.path)" class="nav-link">{{item.title}}</nuxt-link>
                                 </li>
                             </ul>
                         </div>
