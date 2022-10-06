@@ -1,6 +1,7 @@
 <template>
     <header id="header">
         <div class="header-top">
+            <!---
             <div class="container">
                 <div class="row justify-content-md-end">
                     <div class="col-md-4 col-sm-12">
@@ -12,13 +13,14 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>  
+            -->
         </div>
         <div class="header">
             <div class="container">
                <div class="row align-items-center">
-                    <div class="logo col-4">
-                        <img src="~/assets/img/logo.png" />
+                    <div class="logo col-4" v-if="data.logo">
+                        <img :src="`${$config.strapiURL}${data.logo.data.attributes.url}`" alt="Banner">
                     </div>
                     <div v-if="menu" class="col-md-8">
                         <div class="d-none d-md-block d-sm-none">
@@ -45,21 +47,20 @@
 export default {
     data () {
         return {
-            menu: ''
+            menu: '',
+            data: ''
         }
     },
     mounted () {
     window.addEventListener('scroll', this.handleScroll)
     this.$axios.$get(`navigation/render/2?locale=${this.$i18n.locale}&type=TREE`).then((res) => {
             this.menu = res
+    }),
+    this.$axios.$get(`header?populate=logo&locale=${this.$i18n.locale}`).then((res) => {
+        if (res.data && res.data.attributes) {
+            this.data = res.data.attributes
+        }
     })
-      /*
-        this.$axios.$get(`header?populate=*,logo&locale=${this.$i18n.locale}`).then((res) => {
-            if (res.data && res.data.attributes) {
-                this.data = res.data.attributes
-            }
-        })
-        */
     },
     destroyed () {
     window.removeEventListener('scroll', this.handleScroll)
