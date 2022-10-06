@@ -25,7 +25,7 @@ export default {
     }
     },
     mounted () {
-    this.$axios.$get(`contact?populate=*&locale`).then((res) => {
+    this.$axios.$get(`contact?populate=*&locale${this.$i18n.locale}`).then((res) => {
         if (res.data && res.data.attributes) {
         this.data = res.data.attributes
         }

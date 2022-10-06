@@ -29,7 +29,7 @@ export default {
     }
     },
     mounted () {
-    this.$axios.$get(`showroom?populate=*,Card&locale`).then((res) => {
+    this.$axios.$get(`showroom?populate=*,Card&locale${this.$i18n.locale}`).then((res) => {
         if (res.data && res.data.attributes) {
         this.data = res.data.attributes
         }

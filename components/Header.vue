@@ -20,11 +20,18 @@
                     <div class="logo col-4">
                         <img src="~/assets/img/logo.png" />
                     </div>
-                    <div class="col-md-8">
+                    <div v-if="menu" class="col-md-8">
                         <div class="d-none d-md-block d-sm-none">
                             <ul class="nav">
-                                <li v-for="(item, index) in 4" :key="index" class="nav-item">
-                                    <a class="nav-link" aria-current="page" href="#">Home</a>
+                                <li v-for="(item, index) in menu" :key="index" class="nav-item">
+                                    <a v-if="item.items.length > 0" aria-current="page">{{item.title}}
+                                        <ul class="sub-menu">
+                                            <li v-for="(str, index) in item.items" :key="index" class="sub-item">
+                                               <nuxt-link :to="localePath(str.path)">{{ str.title }}</nuxt-link>
+                                            </li>
+                                        </ul>
+                                    </a>
+                                    <a v-else class="nav-link" aria-current="page" href="#">{{item.title}}</a>
                                 </li>
                             </ul>
                         </div>
@@ -35,21 +42,36 @@
     </header>
 </template>
 <script>
-    export default {
-      mounted () {
-        window.addEventListener('scroll', this.handleScroll)
-      },
-      destroyed () {
-        window.removeEventListener('scroll', this.handleScroll)
-      },
-      methods: {
-        handleScroll (event) {
-          if (window.pageYOffset > 30) {
-            document.getElementById('header').classList.add('scrolled')
-          } else {
-            document.getElementById('header').classList.remove('scrolled')
-          }
-        },
-      }
+export default {
+    data () {
+        return {
+            menu: ''
+        }
+    },
+    mounted () {
+    window.addEventListener('scroll', this.handleScroll)
+    this.$axios.$get(`navigation/render/2?locale=${this.$i18n.locale}&type=TREE`).then((res) => {
+            this.menu = res
+    })
+      /*
+        this.$axios.$get(`header?populate=*,logo&locale=${this.$i18n.locale}`).then((res) => {
+            if (res.data && res.data.attributes) {
+                this.data = res.data.attributes
+            }
+        })
+        */
+    },
+    destroyed () {
+    window.removeEventListener('scroll', this.handleScroll)
+    },
+    methods: {
+    handleScroll (event) {
+        if (window.pageYOffset > 30) {
+        document.getElementById('header').classList.add('scrolled')
+        } else {
+        document.getElementById('header').classList.remove('scrolled')
+        }
+    },
     }
-    </script>
+}
+</script>

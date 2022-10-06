@@ -24,7 +24,7 @@
         }
       },
       mounted () {
-        this.$axios.$get(`product?populate=*,Card,Card.img&locale`).then((res) => {
+        this.$axios.$get(`product?populate=*,Card,Card.img&locale${this.$i18n.locale}`).then((res) => {
           if (res.data && res.data.attributes) {
             this.data = res.data.attributes
           }
