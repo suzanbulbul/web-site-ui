@@ -7,10 +7,9 @@
             }
         }
     }
-    button{
-        border: none;
-        background: none;
-        padding: 0;
-        text-align: left;
+    img{
+        height: 450px;
+        object-fit: cover;
+        object-position: center;
     }
 }
