@@ -12,7 +12,7 @@
             <div class="w-80 mx-auto">
                 <h2 class="sub-title">{{data.mapTitle}}</h2>
                 <p class="desc" v-html="data.mapDesc"></p>
-                <a class="link" href="tel:+90 (344) 225 36 01">{{data.phoneNumber}}</a>
+                <a class="link" :href="'tel:+' + data.phoneNumber">{{data.phoneNumber}}</a>
             </div>
       </div>
     </div>

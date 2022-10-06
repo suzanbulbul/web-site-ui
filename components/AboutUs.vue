@@ -5,7 +5,7 @@
                  <img :src="`${$config.strapiURL}${data.img.data.attributes.url}`" alt="Abous-us">
             </div>
             <div class="col-md-6 col-sm-12">
-                <div class="sub-title">{{Hakkımızda}}</div>
+                <div class="sub-title">{{data.title}}</div>
                 <p class="desc" v-html="data.desc"></p>
             </div>
         </div>
