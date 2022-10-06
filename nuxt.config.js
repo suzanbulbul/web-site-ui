@@ -3,7 +3,7 @@ export default {
   head: {
     title: 'web-site-ui',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'tr'
     },
     meta: [
       { charset: 'utf-8' },
@@ -13,6 +13,19 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    ]
+  },
+  i18n: {
+    langDir: 'i18n',
+    defaultLocale: 'tr',
+    fallbackLocale: 'tr',
+    strategy: 'prefix',
+    detectBrowserLanguage: false,
+    lazy: true,
+    locales: [
+      { code: 'tr', iso: 'tr', file: 'tr' }
+      // { code: 'en', iso: 'en', file: 'en' },
+
     ]
   },
 
@@ -45,6 +58,8 @@ export default {
      '@nuxtjs/axios',
     //https://www.npmjs.com/package/@nuxtjs/dotenv     
      '@nuxtjs/dotenv',
+    // https://i18n.nuxtjs.org/setup
+     '@nuxtjs/i18n'
   ],
   
   env: {

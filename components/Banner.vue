@@ -28,7 +28,7 @@ export default {
     }
   },
   mounted () {
-    this.$axios.$get(`banner?populate=slider,slider.img&locale`).then((res) => {
+    this.$axios.$get(`banner?populate=slider,slider.img&locale${this.$i18n.locale}`).then((res) => {
       if (res.data && res.data.attributes) {
         this.data = res.data.attributes.slider
       }

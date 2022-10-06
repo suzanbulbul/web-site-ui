@@ -19,7 +19,7 @@ export default {
     }
   },
   mounted () {
-    this.$axios.$get(`about-us?populate=aboutus,aboutus.img&locale`).then((res) => {
+    this.$axios.$get(`about-us?populate=aboutus,aboutus.img&locale${this.$i18n.locale}`).then((res) => {
       if (res.data && res.data.attributes) {
         this.data = res.data.attributes.aboutus
       }
