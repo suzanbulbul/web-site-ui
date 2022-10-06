@@ -12,18 +12,18 @@
     </div>
 </template>
 <script>
-    export default {
-      data () {
-        return {
-          data: ''
-        }
-      },
-      mounted () {
-        this.$axios.$get(`about-us?populate=aboutus,aboutus.img&locale`).then((res) => {
-          if (res.data && res.data.attributes) {
-            this.data = res.data.attributes.aboutus
-          }
-        })
-      }
+export default {
+  data () {
+    return {
+      data: ''
     }
-    </script>
+  },
+  mounted () {
+    this.$axios.$get(`about-us?populate=aboutus,aboutus.img&locale`).then((res) => {
+      if (res.data && res.data.attributes) {
+        this.data = res.data.attributes.aboutus
+      }
+    })
+  }
+}
+</script>
