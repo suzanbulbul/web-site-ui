@@ -1,8 +1,8 @@
 <template>
     <div class="about-us mb-100">
         <div class="row align-items-center">
-            <div class="col-md-6 col-sm-12 text-center" v-if="data.img.data">
-                <img :src="`${$config.strapiURL}${data.img.data.attributes.url}`" alt="Banner">
+            <div class="col-md-6 col-sm-12 text-center" v-if="data.img">
+                 <img :src="`${$config.strapiURL}${data.img.data.attributes.url}`" alt="Abous-us">
             </div>
             <div class="col-md-6 col-sm-12">
                 <div class="sub-title">{{Hakkımızda}}</div>
