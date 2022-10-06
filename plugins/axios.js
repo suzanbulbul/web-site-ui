@@ -1,4 +1,4 @@
 export default function ({ $axios, app, redirect }) {
-  const token = process.env.VUE_APP_TOKEN
+  const token = process.env.API_TOKEN
   $axios.setToken(token, 'Bearer')
 }

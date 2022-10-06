@@ -45,10 +45,11 @@ export default {
      '@nuxtjs/axios',
     //https://www.npmjs.com/package/@nuxtjs/dotenv     
      '@nuxtjs/dotenv',
-
   ],
+  
   env: {
-    strapiBaseUri: process.env.API_URL || "http://localhost:1337"
+    strapiBaseUri: process.env.API_URL,
+    strapiBaseToken: process.env.API_TOKEN
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
@@ -62,6 +63,18 @@ export default {
   },
   axios: {
     baseURL: 'http://localhost:1337/api/'
+  },
+  
+  publicRuntimeConfig: {
+    axios: {
+      browserBaseURL: 'http://localhost:1337/'
+    }
+  },
+
+  privateRuntimeConfig: {
+    axios: {
+      baseURL: 'http://localhost:1337/'
+    }
   },
   publicRuntimeConfig: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308

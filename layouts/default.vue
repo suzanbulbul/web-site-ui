@@ -7,7 +7,6 @@
 </template>
 <script>
 export default {
-  name: 'Default',
-  scrollToTop: true
+  name: 'Default'
 }
 </script>
