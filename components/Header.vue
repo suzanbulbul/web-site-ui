@@ -19,9 +19,9 @@
         <div class="header">
             <div class="container">
                <div class="row align-items-center">
-                    <div class="logo col-4" v-if="data.logo">
+                    <a href="/" class="logo col-4" v-if="data.logo">
                         <img :src="`${$config.strapiURL}${data.logo.data.attributes.url}`" alt="Banner">
-                    </div>
+                    </a>
                     <div v-if="menu" class="col-md-8">
                         <div class="d-none d-md-block d-sm-none">
                             <ul class="nav">
