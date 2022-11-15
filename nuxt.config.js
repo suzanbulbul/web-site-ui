@@ -77,7 +77,7 @@ export default {
    }
   },
   axios: {
-    baseURL: 'http://localhost:1337/api/'
+    baseURL: 'https://dilek-store-api.netlify.app/'
   },
   
   publicRuntimeConfig: {
