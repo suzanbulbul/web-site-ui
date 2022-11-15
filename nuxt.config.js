@@ -77,7 +77,7 @@ export default {
    }
   },
   axios: {
-    baseURL: 'https://dilek-store-api.netlify.app/'
+    baseURL: 'https://dilek-store-api.netlify.app/api/'
   },
   
   publicRuntimeConfig: {
