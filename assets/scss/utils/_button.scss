@@ -1,0 +1,13 @@
+.btn-more{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 8px 10px;
+    border: none;
+    background: $primary-color;
+    color: $white;
+    &:hover{
+        box-shadow: 0 6px 24px 0 rgb(211 39 6);
+    }
+}

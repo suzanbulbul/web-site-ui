@@ -13,3 +13,38 @@
         padding: 10px;
     }
 }
+.productCard{
+    &__img{
+        height: 550px;
+        object-fit: cover;
+    }
+    &__item{
+        margin-bottom: 1.875rem;
+        background: #fff;
+    }
+    &__detail{
+        min-height: 123px;
+        padding: 24px 16px;
+    }
+    &__newPrice{
+        color: $dark;
+        font-size: 1rem;
+        line-height: 1.125rem;
+
+    }
+    &__desc{
+        color: $gray;
+        font-size: .8125rem;
+        line-height: 14px;
+        margin: 8px 0 16px;
+    }
+    &__title{
+        margin-bottom: 0.3125rem;
+        color: $dark;
+        font-size: 1.0625rem;
+        line-height: 16px;
+        font-weight: 400;
+
+    }
+
+}
